@@ -18,8 +18,8 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=strong.shopping-total-price.price</td>
-	<td>i</td>
+	<td>class=top-cart-info-count</td>
+	<td>initialAmount</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -27,19 +27,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=View Cart</td>
-	<td></td>
-</tr>
-<tr>
 	<td>storeText</td>
-	<td>css=strong.shopping-total-price.price</td>
-	<td>j</td>
+	<td>class=top-cart-info-count</td>
+	<td>updatedAmount</td>
 </tr>
 <tr>
 	<td>assertExpression</td>
-	<td>${i}</td>
-	<td>${j}</td>
+	<td>${initialAmount}</td>
+	<td>${updatedAmount}</td>
 </tr>
 </tbody></table>
 </body>

@@ -4,42 +4,47 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://demo.avactis.com/" />
-<title>Prior state</title>
+<title>Select product</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">Prior state</td></tr>
+<tr><td rowspan="1" colspan="3">Select product</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>4.7.9/product-list.php</td>
+	<td>4.7.9/</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeTitle</td>
-	<td>initialPageTitle</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=View Cart</td>
-	<td></td>
+	<td>storeText</td>
+	<td>class=top-cart-info-count</td>
+	<td>initialAmount</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Continue Shopping</td>
+	<td>link=Furniture</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeTitle</td>
-	<td>previousPageTitle</td>
+	<td>click</td>
+	<td>//input[@value='Add To Cart']</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertExpression</td>
-	<td>${initialPageTitle}</td>
-	<td>${previousPageTitle}</td>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>class=top-cart-info-count</td>
+	<td>updatedAmount</td>
+</tr>
+<tr>
+	<td>assertNotExpression</td>
+	<td>${initialAmount}</td>
+	<td>${updatedAmount}</td>
 </tr>
 </tbody></table>
 </body>
