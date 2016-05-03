@@ -4,48 +4,39 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://demo.avactis.com/" />
-<title>Select product</title>
+<title>User login</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">Select product</td></tr>
+<tr><td rowspan="1" colspan="3">User login</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
-	<td>4.7.9/</td>
+	<td>4.7.9/sign-in.php</td>
 	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=account_sign_in_form_email_id</td>
+	<td>ifi@student.uio.no</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=account_sign_in_form_passwd_id</td>
+	<td>word</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Furniture</td>
+	<td>//input[@value='Sign In']</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>class=top-cart-info-count</td>
-	<td>initialAmount</td>
+	<td>verifyText</td>
+	<td>link=Sign Out</td>
+	<td>Sign Out</td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//input[@value='Add To Cart']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>class=top-cart-info-count</td>
-	<td>updatedAmount</td>
-</tr>
-<tr>
-	<td>assertNotExpression</td>
-	<td>${initialAmount}</td>
-	<td>${updatedAmount}</td>
-</tr>
+
 </tbody></table>
 </body>
 </html>
